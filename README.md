@@ -2,8 +2,8 @@
 
 ## Student Details
 
-- **Full Name:** `<Enter name>`
-- **CCID:** `<Enter ccid>`
+- **Full Name:** `<Kiernan MacIntosh>`
+- **CCID:** `<kcmacint>`
 
 ## References and Resources
 
