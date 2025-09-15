@@ -64,16 +64,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            boolean cityClicked = false;
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                String selectedCity = cities[position];
-
+                cityClicked = true;
                 deleteButton = (Button) findViewById(R.id.delete_button);
                 deleteButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        dataList.remove(position);
-                        cityAdapter.notifyDataSetChanged();
+                        if (cityClicked) {
+                            dataList.remove(position);
+                            cityAdapter.notifyDataSetChanged();
+                        }
+                        cityClicked = false;
                     }
                 });
             }
